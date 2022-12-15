@@ -52,4 +52,8 @@ Check the `datagen` package
 
 ### Details
 
-> **TODO: _Have comments on the classes itself._**
+This repo has the GitHub Actions disabled, if you want to enable them rename the `github` folder to `.github`
+
+> **TODO:**
+> * Have more comments on the classes itself.
+> * Describe in this document the step by step needed changes to get started: changing package name, mod name, etc.
