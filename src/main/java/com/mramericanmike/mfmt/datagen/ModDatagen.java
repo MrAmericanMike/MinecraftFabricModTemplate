@@ -1,6 +1,5 @@
 package com.mramericanmike.mfmt.datagen;
 
-import com.mramericanmike.mfmt.datagen.advancements.ModAdvancementGenerators;
 import com.mramericanmike.mfmt.datagen.lang.ModEnglishLangProvider;
 import com.mramericanmike.mfmt.datagen.loot_table.ModLootTableGenerator;
 import com.mramericanmike.mfmt.datagen.models.ModModelGenerator;
@@ -14,7 +13,7 @@ public class ModDatagen implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		fabricDataGenerator.addProvider(ModModelGenerator::new);
 		fabricDataGenerator.addProvider(ModEnglishLangProvider::new);
-		fabricDataGenerator.addProvider(ModAdvancementGenerators::new);
+		//fabricDataGenerator.addProvider(ModAdvancementGenerators::new);
 		fabricDataGenerator.addProvider(ModRecipeGenerator::new);
 		fabricDataGenerator.addProvider(ModLootTableGenerator::new);
 		fabricDataGenerator.addProvider(ModTagGenerator::new);

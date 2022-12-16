@@ -25,7 +25,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 				.input('W', ModItems.WAND)
 				.input('E', Items.EMERALD)
 				.criterion(RecipeProvider.hasItem(ModItems.WAND), RecipeProvider.conditionsFromItem(ModItems.WAND))
-				.criterion(RecipeProvider.hasItem(Items.EMERALD), RecipeProvider.conditionsFromItem(Items.EMERALD))
 				.offerTo(exporter);
 	}
 }
