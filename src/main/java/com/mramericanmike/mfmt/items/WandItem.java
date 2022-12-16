@@ -1,6 +1,6 @@
 package com.mramericanmike.mfmt.items;
 
-import com.mramericanmike.mfmt.ModCreativeTab;
+import com.mramericanmike.mfmt.creativetab.ModCreativeTab;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

@@ -1,5 +1,6 @@
 package com.mramericanmike.mfmt;
 
+import com.mramericanmike.mfmt.blocks.ModBlocks;
 import com.mramericanmike.mfmt.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -12,5 +13,6 @@ public class MinecraftFabricModTemplate implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("MinecraftFabricModTemplate");
 		ModItems.register();
+		ModBlocks.register();
 	}
 }

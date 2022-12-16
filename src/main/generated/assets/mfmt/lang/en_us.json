@@ -1,4 +1,6 @@
 {
+  "block.mfmt.table": "Table",
+  "block.mfmt.void": "Void",
   "item.mfmt.emerald_wand": "Emerald Wand",
   "item.mfmt.emerald_wand.tooltip": "It's EmeraldWandtastick",
   "item.mfmt.wand": "Wand",

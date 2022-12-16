@@ -4,11 +4,11 @@ This mod template demonstrates:
 
 * Adding an Item (File `ModItems` called from `onInitialize` method in `MinecraftFabricModTemplate`)
 * Adding a CreativeTab (File `ModCreativeTab` used when creating items and blocks)
+* Adding a Block (File `ModBlocks` called from `onInitialize` method in `MinecraftFabricModTemplate`) Notice that we register a block and an item for the block
 
 Things to notice:
-* The `assets` folder under `resources` that's where textures, models, lang files and more are. Can be added by hand or generated via code (Not demonstrated yet)
+* The `assets` folder under `resources` that's where textures, models, lang files and more are. Can be added by hand or generated via code
 * The `data` folder contains recipes and advancements (This is the popup that show when a recipe is unlocked)
-
 
 ## Datagen · [LINK](https://fabricmc.net/wiki/tutorial:datagen_setup)
 

@@ -1,5 +1,6 @@
-package com.mramericanmike.mfmt;
+package com.mramericanmike.mfmt.creativetab;
 
+import com.mramericanmike.mfmt.ModInfo;
 import com.mramericanmike.mfmt.items.ModItems;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;

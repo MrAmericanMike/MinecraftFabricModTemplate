@@ -1,6 +1,6 @@
 plugins {
-	id 'fabric-loom' version '1.0-SNAPSHOT'
-	id 'maven-publish'
+	id "fabric-loom" version "1.0-SNAPSHOT"
+	id "maven-publish"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -34,6 +34,7 @@ dependencies {
 }
 
 processResources {
+	// duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 	inputs.property "version", project.version
 
 	filesMatching("fabric.mod.json") {
@@ -47,8 +48,8 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 java {
-	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-	// if it is present.
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar
+	// task and to the "build" task if it is present.
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 }
@@ -59,7 +60,7 @@ jar {
 	}
 }
 
-// configure the maven publication
+// Configure the Maven publication
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
@@ -77,27 +78,27 @@ publishing {
 }
 
 loom {
-    runs {
-        // This adds a new gradle task that runs the datagen API: "gradlew runDatagenClient"
-        datagenClient {
-            inherit client
-            name "Data Generation"
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=${modid}"
+	runs {
+		// This adds a new gradle task that runs the datagen API: "gradlew runDatagenClient"
+		datagenClient {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=${modid}"
 
-            runDir "build/datagen"
-        }
-    }
+			runDir "build/datagen"
+		}
+	}
 }
 
 // Add the datagenned files into the jar.
 sourceSets {
-    main {
-        resources {
-            srcDirs += [
-                    'src/main/generated'
-            ]
-        }
-    }
+	main {
+		resources {
+			srcDirs += [
+					'src/main/generated'
+			]
+		}
+	}
 }
