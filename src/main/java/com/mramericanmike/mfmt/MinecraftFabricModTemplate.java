@@ -11,8 +11,11 @@ public class MinecraftFabricModTemplate implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
 		LOGGER.info("MinecraftFabricModTemplate");
 		ModItems.register();
 		ModBlocks.register();
+
 	}
+
 }

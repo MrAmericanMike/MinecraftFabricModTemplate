@@ -32,6 +32,7 @@ public class WandItem extends Item {
 	@Override
 	public ActionResult useOnBlock(ItemUsageContext context) {
 		World world = context.getWorld();
+		if(!world.isClient()){
 		BlockPos blockPos = context.getBlockPos();
 		Block block = world.getBlockState(blockPos).getBlock();
 		if(block.equals(Blocks.SAND)){
@@ -45,6 +46,8 @@ public class WandItem extends Item {
 			}
 		}
 
+		return ActionResult.SUCCESS;
+		}
 		return ActionResult.SUCCESS;
 	}
 }

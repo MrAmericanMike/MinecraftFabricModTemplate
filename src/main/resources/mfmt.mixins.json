@@ -1,14 +1,19 @@
 {
-  "required": true,
-  "minVersion": "0.8",
-  "package": "com.mramericanmike.mfmt.mixin",
-  "compatibilityLevel": "JAVA_17",
-  "mixins": [
-  ],
-  "client": [
-      "MinecraftFabricModTemplateMixin"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+	"required": true,
+	"minVersion": "0.8",
+	"package": "com.mramericanmike.mfmt.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"PlayerEntityMixin",
+		"LivingEntityMixin"
+	],
+	"client": [
+		"MinecraftFabricModTemplateMixin"
+	],
+	"server": [
+
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
 }
