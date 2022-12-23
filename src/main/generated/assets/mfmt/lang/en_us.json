@@ -1,0 +1,9 @@
+{
+  "block.mfmt.table": "Table",
+  "block.mfmt.void": "Void",
+  "item.mfmt.emerald_wand": "Emerald Wand",
+  "item.mfmt.emerald_wand.tooltip": "It's EmeraldWandtastick",
+  "item.mfmt.wand": "Wand",
+  "item.mfmt.wand.tooltip": "It's Wandtastick",
+  "itemGroup.mfmt.creativetab": "MFMT"
+}
