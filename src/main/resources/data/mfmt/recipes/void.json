@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CIC",
+        "IDI",
+        "CIC"
+    ],
+    "key": {
+        "C": {
+            "item": "minecraft:black_concrete"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "D": {
+            "item": "minecraft:cyan_dye"
+        }
+    },
+    "result": {
+        "item": "mfmt:void",
+        "count": 4
+    }
+}
