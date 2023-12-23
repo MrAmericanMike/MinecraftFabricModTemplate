@@ -10,15 +10,17 @@ import org.slf4j.LoggerFactory;
 
 public class MinecraftFabricModTemplate implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(ModInfo.MOD_ID);
-	public static final ModConfig CONFIG = new ModConfig();
 
 	@Override
 	public void onInitialize() {
 
 		LOGGER.info("MinecraftFabricModTemplate");
-		CONFIG.register();
+		ModConfig.register();
 		ModItems.register();
 		ModBlocks.register();
 		ModCreativeTab.register();
+
+		System.out.println("TEST1: " + ModConfig.test1);
+		System.out.println("TEST2: " + ModConfig.test2);
 	}
 }

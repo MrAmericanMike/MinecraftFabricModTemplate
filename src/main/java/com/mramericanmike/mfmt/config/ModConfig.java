@@ -10,14 +10,13 @@ import java.util.Properties;
 
 public class ModConfig {
 
-	private final Path CONIFGS_PATH = FabricLoader.getInstance().getConfigDir().resolve("mfmt.properties");
+	private static final Path CONIFGS_PATH = FabricLoader.getInstance().getConfigDir().resolve("mfmt.properties");
+	private static final String TEST1_KEY = "test1";
+	private static final String TEST2_KEY = "test2";
+	public static boolean test1 = true;
+	public static boolean test2 = true;
 
-	private final String TEST1_KEY = "test1";
-	private final String TEST2_KEY = "test2";
-	public boolean test1 = true;
-	public boolean test2 = true;
-
-	public void register() {
+	public static void register() {
 		Properties properties = new Properties();
 		if (!Files.exists(CONIFGS_PATH)) {
 			try {
@@ -40,9 +39,9 @@ public class ModConfig {
 		saveProperties(properties);
 	}
 
-	private void saveProperties(Properties properties) {
-		properties.setProperty(TEST1_KEY, Boolean.toString(this.test1));
-		properties.setProperty(TEST2_KEY, Boolean.toString(this.test2));
+	private static void saveProperties(Properties properties) {
+		properties.setProperty(TEST1_KEY, Boolean.toString(test1));
+		properties.setProperty(TEST2_KEY, Boolean.toString(test2));
 		try {
 			properties.store(Files.newOutputStream(CONIFGS_PATH), "Configuration file");
 		} catch (IOException e) {
@@ -51,16 +50,16 @@ public class ModConfig {
 		}
 	}
 
-	private void readProperties(Properties properties) {
-		this.test1 = defaultedBool(properties.getProperty(TEST1_KEY), this.test1);
-		this.test2 = defaultedBool(properties.getProperty(TEST2_KEY), this.test2);
+	private static void readProperties(Properties properties) {
+		test1 = defaultedBool(properties.getProperty(TEST1_KEY), test1);
+		test2 = defaultedBool(properties.getProperty(TEST2_KEY), test2);
 	}
 
-	private boolean bool(String bool) {
+	private static boolean bool(String bool) {
 		return bool != null && bool.equalsIgnoreCase("true");
 	}
 
-	private boolean defaultedBool(String bool, boolean defaultValue) {
+	private static boolean defaultedBool(String bool, boolean defaultValue) {
 		return bool == null ? defaultValue : bool(bool);
 	}
 }
